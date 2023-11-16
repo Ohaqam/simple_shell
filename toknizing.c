@@ -17,9 +17,9 @@ char **toknizing(char *oma_cmd, int i, int n)
 
 	token = strtok(oma_cmd, delim);
 	tok = malloc(sizeof(char *) * n);
-	
 
-        while (token != NULL)
+
+	while (token != NULL)
 	{
 		tok[i] = malloc(sizeof(char) * (strlen(token) + 1));
 		strcpy(tok[i], token);
@@ -28,9 +28,9 @@ char **toknizing(char *oma_cmd, int i, int n)
 	}
 	tok[i] = NULL;
 		if (i == 0)
-	       {
+		{
 			free(tok);
 			tok = NULL;
-		   }
-    return (tok);
+		}
+		return (tok);
 }

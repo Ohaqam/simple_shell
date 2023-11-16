@@ -12,10 +12,9 @@ int omaexe(char **tok, char **argv)
 {
 	pid_t my_pid;
 	char *cmd = NULL;
-	
 
 	cmd = omamap(tok[0]);
-	if(cmd == NULL)
+	if (cmd == NULL)
 	{
 		write(2, argv[0], strlen(argv[0]));
 			write(2, ": 1: ", 5);
@@ -25,7 +24,7 @@ int omaexe(char **tok, char **argv)
 			st = 127;
 		return (st);
 	}
-	
+
 	my_pid = fork();
 	if (my_pid == 0)
 	{

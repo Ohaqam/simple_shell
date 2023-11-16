@@ -34,17 +34,12 @@ int oma(char **argv)
 			freetok(tok);
 			free(oma_cmd);
 			exit(EXIT_SUCCESS); }
-		
 		if (strcmp(tok[0], "env") == 0)
 		{
-		
 			while (env[j] != NULL)
 			{
-			
 				envbuf = strlen(env[j]);
-
 				write(1, env[j], envbuf);
-				
 				j++; }
 			freetok(tok);
 			free(oma_cmd);

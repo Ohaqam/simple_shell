@@ -10,10 +10,10 @@
 */
 int st;
 extern char **environ;
-int main(int argc, char **argv )
+int main(int argc, char **argv)
 {
 	(void)argc;
 	oma(argv);
 	/*printf ("%d", st);*/
-	return(st);
+	return (st);
 }
